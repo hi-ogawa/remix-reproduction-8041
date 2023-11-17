@@ -18,6 +18,23 @@ const loader = async () => {
   const lib = await import("./assets/server-split-iBm_D6Kf.js");
   return lib.hello();
 };
+
+$ cat build/.vite/manifest.json
+{
+  "app/server-split.ts": {
+    "file": "assets/server-split-iBm_D6Kf.js",
+    "isDynamicEntry": true,
+    "src": "app/server-split.ts"
+  },
+  "virtual:server-entry": {
+    "dynamicImports": [
+      "app/server-split.ts"
+    ],
+    "file": "index.js",
+    "isEntry": true,
+    "src": "virtual:server-entry"
+  }
+}
 ```
 
 # templates/unstable-vite
