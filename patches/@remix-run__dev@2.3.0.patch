@@ -1,0 +1,21 @@
+diff --git a/dist/vite/plugin.js b/dist/vite/plugin.js
+index 2a9bc7066ecd3819b9dd490d6a8cb543682cdbfa..d0c3e4851675c01233d82d8158a0d273acf48b48 100644
+--- a/dist/vite/plugin.js
++++ b/dist/vite/plugin.js
+@@ -386,7 +386,7 @@ const remixVitePlugin = (options = {}) => {
+                 input: [pluginConfig.entryClientFilePath, ...Object.values(pluginConfig.routes).map(route => path__namespace.resolve(pluginConfig.appDirectory, route.file))]
+               }
+             } : {
+-              ssrEmitAssets: true,
++              ssrEmitAssets: false,
+               // We move SSR-only assets to client assets and clean the rest
+               manifest: true,
+               // We need the manifest to detect SSR-only assets
+@@ -555,6 +555,7 @@ const remixVitePlugin = (options = {}) => {
+       // After the SSR build is finished, we inspect the Vite manifest for
+       // the SSR build and move all server assets to client assets directory
+       async handler() {
++        return;
+         if (!ssrBuildContext.isSsrBuild) {
+           return;
+         }
