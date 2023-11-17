@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
   return [
@@ -6,6 +6,11 @@ export const meta: MetaFunction = () => {
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
+
+export const loader: LoaderFunction = async () => {
+  const lib = await import("../server-split");
+  return lib.hello();
+}
 
 export default function Index() {
   return (

@@ -1,3 +1,25 @@
+Reproduction for
+
+- https://github.com/remix-run/remix/issues/8041
+
+```sh
+$ pnpm build
+...
+
+✓ 7 modules transformed.
+build/.vite/manifest.json              0.31 kB
+build/assets/server-split-iBm_D6Kf.js  0.06 kB
+build/index.js                         6.87 kB
+✓ built in 116ms
+
+$ grep -C 2 'assets/server-split' build/index.js
+...
+const loader = async () => {
+  const lib = await import("./assets/server-split-iBm_D6Kf.js");
+  return lib.hello();
+};
+```
+
 # templates/unstable-vite
 
 ⚠️ Remix support for Vite is unstable and not recommended for production.
