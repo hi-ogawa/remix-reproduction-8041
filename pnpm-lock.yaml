@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   '@remix-run/dev@2.3.0':
-    hash: y47qhrolsdxvcktnmxoc6ponqi
+    hash: nsj6lljh37f3flzvhchrwkle6m
     path: patches/@remix-run__dev@2.3.0.patch
 
 dependencies:
@@ -32,7 +32,7 @@ dependencies:
 devDependencies:
   '@remix-run/dev':
     specifier: ^2.3.0
-    version: 2.3.0(patch_hash=y47qhrolsdxvcktnmxoc6ponqi)(@remix-run/serve@2.3.0)(typescript@5.2.2)(vite@5.0.0)
+    version: 2.3.0(patch_hash=nsj6lljh37f3flzvhchrwkle6m)(@remix-run/serve@2.3.0)(typescript@5.2.2)(vite@5.0.0)
   '@remix-run/eslint-config':
     specifier: ^2.3.0
     version: 2.3.0(eslint@8.53.0)(react@18.2.0)(typescript@5.2.2)
@@ -1283,7 +1283,7 @@ packages:
     dev: true
     optional: true
 
-  /@remix-run/dev@2.3.0(patch_hash=y47qhrolsdxvcktnmxoc6ponqi)(@remix-run/serve@2.3.0)(typescript@5.2.2)(vite@5.0.0):
+  /@remix-run/dev@2.3.0(patch_hash=nsj6lljh37f3flzvhchrwkle6m)(@remix-run/serve@2.3.0)(typescript@5.2.2)(vite@5.0.0):
     resolution: {integrity: sha512-Eno0XHyIKo5GyzN4OAwNkgkyl4H1mLWbqeVUA8T5HmVDj+8qJLIcYeayS2BmA1KYAHJBiy5ufAGi2MpaXMjKww==}
     engines: {node: '>=18.0.0'}
     hasBin: true

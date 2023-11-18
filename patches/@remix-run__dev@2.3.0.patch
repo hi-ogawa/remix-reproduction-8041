@@ -1,7 +1,24 @@
 diff --git a/dist/vite/plugin.js b/dist/vite/plugin.js
-index 2a9bc7066ecd3819b9dd490d6a8cb543682cdbfa..4b250ffe2b7647d7f474f835aae4b2cfa10076f8 100644
+index 2a9bc7066ecd3819b9dd490d6a8cb543682cdbfa..2d6b425efa4c448af8f615546a1b038fc08550f7 100644
 --- a/dist/vite/plugin.js
 +++ b/dist/vite/plugin.js
+@@ -394,11 +394,11 @@ const remixVitePlugin = (options = {}) => {
+               rollupOptions: {
+                 ...((_viteUserConfig$build2 = viteUserConfig.build) === null || _viteUserConfig$build2 === void 0 ? void 0 : _viteUserConfig$build2.rollupOptions),
+                 preserveEntrySignatures: "exports-only",
+-                input: serverEntryId,
+-                output: {
+-                  entryFileNames: path__namespace.basename(pluginConfig.serverBuildPath),
+-                  format: pluginConfig.serverModuleFormat
+-                }
++                input: [serverEntryId],
++                // output: {
++                //   entryFileNames: path__namespace.basename(pluginConfig.serverBuildPath),
++                //   format: pluginConfig.serverModuleFormat
++                // }
+               }
+             })
+           }
 @@ -584,7 +584,7 @@ const remixVitePlugin = (options = {}) => {
          }
          let ssrAssetsDir = path__namespace.join(resolvedViteConfig.build.outDir, resolvedViteConfig.build.assetsDir);
