@@ -9,8 +9,9 @@ export const meta: MetaFunction = () => {
 
 export const loader: LoaderFunction = async () => {
   const lib = await import("../server-split");
-  return lib.hello();
-}
+  const lib2 = await import("../server-split-2");
+  return lib.hello() + lib2.hello();
+};
 
 export default function Index() {
   return (

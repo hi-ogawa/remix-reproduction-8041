@@ -1,0 +1,13 @@
+diff --git a/dist/vite/plugin.js b/dist/vite/plugin.js
+index 2a9bc7066ecd3819b9dd490d6a8cb543682cdbfa..4b250ffe2b7647d7f474f835aae4b2cfa10076f8 100644
+--- a/dist/vite/plugin.js
++++ b/dist/vite/plugin.js
+@@ -584,7 +584,7 @@ const remixVitePlugin = (options = {}) => {
+         }
+         let ssrAssetsDir = path__namespace.join(resolvedViteConfig.build.outDir, resolvedViteConfig.build.assetsDir);
+         if (fse__namespace.existsSync(ssrAssetsDir)) {
+-          await fse__namespace.remove(ssrAssetsDir);
++          // await fse__namespace.remove(ssrAssetsDir);
+         }
+       }
+     },
